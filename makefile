@@ -13,4 +13,4 @@ main.o: main.c
 	gcc -Wall -g -c main.c
 	
 clean:
-	rm *.o frequency fre_output.txt	fre_r_output.txt
+	rm *.o frequency
