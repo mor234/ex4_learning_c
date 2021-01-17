@@ -118,8 +118,9 @@ node *addLetter(node *n, char l, boolean isLast) {
  *
  */
 
-void printLexNode(node *n, node *root) {
-    printf("%c", n->letter);//print this letter
+void printLexNode(node *n, node *root) {   
+    if((n->letter)!='\0')//if it's not the root
+        printf("%c", n->letter);//print this letter
     if (n->count > 0 && !(n->isCountPrinted)) {//if a word ends here and the counter wasn't printed already- print the counter
         printf(" %ld\n", n->count);
         n->isCountPrinted = TRUE;
@@ -160,7 +161,8 @@ void printLexNode(node *n, node *root) {
  */
 
 void printOpLexNode(node *n, node *root) {
-    printf("%c", n->letter);
+    if((n->letter)!='\0')//if it's not the root
+        printf("%c", n->letter);
     if (n->count > 0 && !(n->isCountPrinted)) {
         printf(" %ld\n", n->count);
         n->isCountPrinted = TRUE;
